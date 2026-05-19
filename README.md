@@ -57,12 +57,16 @@ Os scripts seguem uma ordem cronológica de dependência. Execute-os na sequênc
 
 1. **Gere os dados sintéticos combinados:**
    ```bash
-   python scripts/02_dataset_builder_kfold.py
+   python src/02_dataset_builder_kfold.py
    
-1. **Construa a árvore de diretórios e os folds de treino:**
+2. **Construa a árvore de diretórios e os folds de treino:**
    ```bash
-   python scripts/01_augmentation.py
+   python src/01_augmentation.py
    
-1. **Execute o cenário de treinamento desejado (Exemplo: Baseline):**
+3. **Execute o cenário de treinamento desejado (Exemplo: Baseline):**
    ```bash
-   python scripts/03_1_run_scenario_01_baseline.py
+   python src/03_1_run_scenario_01_baseline.py
+
+Os resultados e pesos gerados salvos pelo YOLO estarão organizados dentro da pasta raiz 
+   ```bash
+   runs/tcc_kfold/.
